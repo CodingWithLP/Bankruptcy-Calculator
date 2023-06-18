@@ -1,0 +1,20 @@
+body {
+    background-color: coral;
+}
+
+div.headbox {
+    background-color: lightblue;
+    border: 2px solid black;
+    margin: 2px;
+    color: rgb(23, 21, 182);
+    font-family: "Times New Roman", Times, serif;
+
+}
+
+div.input {
+    background-color: lightblue;
+    border: 2px solid black;
+    margin: 1px;
+    color: rgb(2, 104, 104);
+    font-family: Arial, Helvetica, sans-serif;
+}

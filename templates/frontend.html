@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flask app</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+        <div class="headbox">
+            <h1>Company Bankruptcy Calcular</h1>
+            <h2>Enter info below to find out if your company will go bankrupt</h2>
+        </div>
+        <br>
+        <div class="input">
+            <form action="{{ url_for('rec')}}" method="post">
+
+                <label for="cg">The total cost of goods sold:</label><br>
+                <input type="text" id="cg" name="cg"><br>                
+                <label for="inventory">The sellable items in inventory:</label><br>
+                <input type="text" id="inventory" name="inventory"><br> 
+                <label for="netincome">Net Income:</label><br>
+                <input type="text" id="netincome" name="netincome"><br>                
+                <label for="assetp">The price of an asset:</label><br>
+                <input type="text" id="assetp" name="assetp"><br>                               
+                <label for="assets">Total Assets:</label><br>
+                <input type="text" id="assets" name="assets"><br>                                                
+                <label for="debt">The debt from your company's loans not due within a year:</label><br>
+                <input type="text" id="debt" name="debt"><br> 
+                <label for="ebit">Earnings before interest and taxes:</label><br>
+                <input type="text" id="ebit" name="ebit"><br>                               
+                <label for="grossreven">Total Revenue before subtracting expenses:</label><br>
+                <input type="text" id="grossreven" name="grossreven"><br>                                
+                <label for="tl">Combined debts owed to outside parties:</label><br>
+                <input type="text" id="tl" name="tl"><br>  
+                <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
+            </form>
+        </div>
+        <br>
+        <div class="headbox">
+            <h2>{{ predection }}</h2>
+        </div>
+    </body>
+</html>
